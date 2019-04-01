@@ -1,3 +1,9 @@
-.container{
-    background-color: blue;
+#logo{
+    background-image: url(./images/musicBackground.jpg);
+    justify-content: space-between;
+    padding: 15%;
+    background-repeat: no-repeat;
+    margin: auto;
+    width: fit-content;
+
 }
