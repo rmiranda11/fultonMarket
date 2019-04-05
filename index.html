@@ -28,6 +28,16 @@
         href="https://fonts.googleapis.com/css?family=IM+Fell+English|IM+Fell+English+SC|Libre+Baskerville|Text+Me+One"
         rel="stylesheet">
 
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
     <!-- {{!-- Favicon Link --}} -->
     <link rel="shortcut icon" href="./Images/dog.jpg" type="image/x-icon">
 
@@ -40,148 +50,158 @@
 
     <!-- {{!-- jQuery --}} -->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="./resetCSS.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
 
 </head>
 
 <body>
 
     <div class="container-fluid">
-        <nav class="nav">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="nav-link" href="#">About Fulton Market</a>
-            <a class="nav-link" href="#">Menu/Reservtion</a>
-            <a class="nav-link" href="#">Contact</a>
+
+        <nav id="NavbarHeader" class="navbar navbar-expand-lg">
+
+            <!--  Show this only on mobile to medium screens  -->
+            <a class="navbar-brand d-lg-none" href="#">
+                <img id="fultonMarketLogo" class="img-fluid" src="./images/fultonMarketLogo.png">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--  Use flexbox utility classes to change how the child elements are justified  -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carouselExampleFade">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Fulton Market</a>
+                    </li>
+                </ul>
+
+                <!--   Show this only lg screens and up   -->
+                <span class="justify-content-between">
+                    <a class="navbar-brand d-none d-lg-block justify-content-between">
+                        <img id="fultonMarketLogo" class="img-fluid justify-content-between"
+                            src="./images/fultonMarketLogo.png" alt="Fulton Market Logo">
+                    </a>
+                </span>
+
+                <!-- Other two links for the NavBar -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu/Reservtion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
+        <hr>
+
+
 
         <section id="logo">
-            <img src="./images/fultonMarketLogo.png">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <!-- <hr> -->
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="250">
-                    <img src="https://ucfc0b02899cfd5cbff25b44350d.previews.dropboxusercontent.com/p/thumb/AAYroN5Fe7JqqPKppQ70OPHmB0UeXKJ8-oRpb5WH8C2m6dbZG4iNyk04we4ScQBPQ09kiqgJ7EPuZsJKt9eYToAA1SwpGV-Gd5gnAC9GGgHsGKjrdcQ3fPHJw1DSyzjUuSLpxk9JF-l2NWQqmhUwZXPV9USNc9LnckUnk77ULTVWmO1Vs2r3YGps9AYRBfYSPU8RUTBonBPuETmXAwHH69-8x1KWXViOd80MgC-UuuWo_TzZNQ8a9k8G2Y5u0MupgiGvD8ih671vMZJ957R4aGhvaHvb4m6kANhsdQxZDVF97_X8BV1Tx8x4hEvBJ7Me70Gjxu1jlpSQTttN1s6t3hOqzlyC5hEKTRo38BDLBfS2OjvKuCeGMBmLyOTX9uAekgS7GcVyCmK38cj6DaDv1omM2M2c-L5GVWxcWsfbh3IAwRz6knXjLMYSBIDDfVB6SDo/p.jpeg?size_mode=5"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-interval="250">
-                    <img src="https://uc742e1e48d75dea99b8670ea3fe.previews.dropboxusercontent.com/p/thumb/AAaLXcGaDk9Da-8gEi4SDB6JVNWfLg_PRS81a66usefEp4G-B2kPGSsmRlJmHQ8mq1E3GS-Dtrw8_fFlIK5LU-QpY21mQO9AIPasL3LjNXEBeaf1rZs7G5ZmqYZAR380-RGbOcKlrxJfBtQyEK5_k1cloXq6RSbpBqm5zyrqbOh1HFXftPLt7weXDrKeTVoRi0uFVsS-VhNd41QRtpRRKXfUY53iApoWBE6Ww-2RnUu6KFt4VGEZLpRR_B0ekanTyQ3FVGLkdYufFuwi6mCZliitjyMQFGL2pAw_lvFMafVZuIFZTjszCKytHU8QbGxEG5F52lhnsf8CORAejAdSeRLf5p3kBNqQYs7L-17bnVVvb1L7qgqlIARjAlUgpu4uN7Axls1d_AkEkypH37aUwEJFqmn1chmkrxVEHcEq-jwnlp9jRWeBw7oOrLppcsPw_2WzZALuRhWmn9RC_hKuoj2iG3aYmRyz8eW7XO980-jY7pwOjKW66Z6jCAyBP0QHCL8/p.jpeg?size_mode=5"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-interval="250">
-                    <img src="https://uc7baafa2118ddde2b8c6029d3ef.previews.dropboxusercontent.com/p/thumb/AAYErGRghOWjhBSKY19yi964chb15KyOrP_v0wLFoCjpwVeRDAEDIxyroTB0O4_Pi3K3r3-viLbyz7qq__RgHvyLsbx2OPHlGL0c23fonay711Sm_GgmVEDlSOIih9KCqZvxw8ueCxx9Rr8ahSoZheBSHEW00pIsUD3_DYm-yPjK_tZm9uMTb18mG-6fV5UFBsIT-khJZLwYjU8IdF_PysD6pBg25yl5kH9NElB_0ECLmtqQSW3X5BoHgYTSZEd8ksaxl1Pc8yL64R9_LDeGMYBP5fVOwx2lZii7iwIpZo1gnbSFbsXOZEyDbJt0xZQ9e9hen45unMePVx34kfDdSNsg2Iyb0rzpamF__c4fmwjk1BIgWdiGk4SgXI_xjubpT4165mbmXHYp5IXM-VWhmbVc8Xozn1EXosyuKr6R45rCS-e2B4JVV5Gjmy1eYk1eS34tk3hG3sB9ykqGKRLDCLIeD6p9Zf_k2KzL1yHK5DbfRGXo7xtvILtd0Z_MPP_jB-A/p.jpeg?size_mode=5"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-interval="250">
-                    <img src="https://uc5bdf51791531bd78afdd1e7057.previews.dropboxusercontent.com/p/thumb/AAYlFS4G4-MrRNoOHaoCez_zgK1n1xCgUXzC7tIDb-k1t8PUwAc1hrs6k50js_Cc_jxQcYF02pd-9eMcoIH4ozS9dRFvaJ2F5bOyfNO0rgrTQh9HOa7gkqW3LxQNSXP8mvnF0eQ39mx9FLchqppmREsX9wuq7gPxye6SgerCnUr72kAqwFoM1G2vaWHkMWwwMMysEPYIsPufbCAYq8aMR4NXlDWYnU0AlhPwagGaTEDr9zx-jn2I8NrEREjWGTDKzRzF6S78conkPyWsT7DxRIUHXLpKQqZ5sJO8XphWQuzKrxIvSjffr8kQJFuaPtOzz3rbePsr7ccJwbv_52WdzyhzU9kbLnVA1ezP0LIZud4OYEOVAcnElmi8wMQon3LMIpCjKbUY8WpWL41IHPxrtoX7iqkIZ2ooSE23IdSj0Tyu__6IDILdjEVKBusRxCdsEAUYslJjbC-0k7Ee_BoQCymEnu8L_wu_VvH5ZFjmJ0e-2TjaIQDZarVFpHTA4tqGsVw9cYI7RD0usvHa6h0v-zvcaF5Tjmj8ZtSMpYJc9a3w46SPBfUoLAUtsbHNiI0RAYw/p.jpeg?size_mode=5"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-interval="250">
-                    <img src="https://uc7baafa2118ddde2b8c6029d3ef.previews.dropboxusercontent.com/p/thumb/AAYErGRghOWjhBSKY19yi964chb15KyOrP_v0wLFoCjpwVeRDAEDIxyroTB0O4_Pi3K3r3-viLbyz7qq__RgHvyLsbx2OPHlGL0c23fonay711Sm_GgmVEDlSOIih9KCqZvxw8ueCxx9Rr8ahSoZheBSHEW00pIsUD3_DYm-yPjK_tZm9uMTb18mG-6fV5UFBsIT-khJZLwYjU8IdF_PysD6pBg25yl5kH9NElB_0ECLmtqQSW3X5BoHgYTSZEd8ksaxl1Pc8yL64R9_LDeGMYBP5fVOwx2lZii7iwIpZo1gnbSFbsXOZEyDbJt0xZQ9e9hen45unMePVx34kfDdSNsg2Iyb0rzpamF__c4fmwjk1BIgWdiGk4SgXI_xjubpT4165mbmXHYp5IXM-VWhmbVc8Xozn1EXosyuKr6R45rCS-e2B4JVV5Gjmy1eYk1eS34tk3hG3sB9ykqGKRLDCLIeD6p9Zf_k2KzL1yHK5DbfRGXo7xtvILtd0Z_MPP_jB-A/p.jpeg?size_mode=5"
-                        class="d-block w-100" alt="...">
-                </div>
+        <div class="fluid-container">
+            <div class="row">
+
+                <div class="col-md-3"></div>
+
+                <div class="col-md-6">
+
+
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-interval="250">
+                                <img src="https://ucfc0b02899cfd5cbff25b44350d.previews.dropboxusercontent.com/p/thumb/AAYroN5Fe7JqqPKppQ70OPHmB0UeXKJ8-oRpb5WH8C2m6dbZG4iNyk04we4ScQBPQ09kiqgJ7EPuZsJKt9eYToAA1SwpGV-Gd5gnAC9GGgHsGKjrdcQ3fPHJw1DSyzjUuSLpxk9JF-l2NWQqmhUwZXPV9USNc9LnckUnk77ULTVWmO1Vs2r3YGps9AYRBfYSPU8RUTBonBPuETmXAwHH69-8x1KWXViOd80MgC-UuuWo_TzZNQ8a9k8G2Y5u0MupgiGvD8ih671vMZJ957R4aGhvaHvb4m6kANhsdQxZDVF97_X8BV1Tx8x4hEvBJ7Me70Gjxu1jlpSQTttN1s6t3hOqzlyC5hEKTRo38BDLBfS2OjvKuCeGMBmLyOTX9uAekgS7GcVyCmK38cj6DaDv1omM2M2c-L5GVWxcWsfbh3IAwRz6knXjLMYSBIDDfVB6SDo/p.jpeg?size_mode=5"
+                                    class="d-block w-100" alt="first">
+                            </div>
+                            <div class="carousel-item" data-interval="250">
+                                <img src="https://uc742e1e48d75dea99b8670ea3fe.previews.dropboxusercontent.com/p/thumb/AAaLXcGaDk9Da-8gEi4SDB6JVNWfLg_PRS81a66usefEp4G-B2kPGSsmRlJmHQ8mq1E3GS-Dtrw8_fFlIK5LU-QpY21mQO9AIPasL3LjNXEBeaf1rZs7G5ZmqYZAR380-RGbOcKlrxJfBtQyEK5_k1cloXq6RSbpBqm5zyrqbOh1HFXftPLt7weXDrKeTVoRi0uFVsS-VhNd41QRtpRRKXfUY53iApoWBE6Ww-2RnUu6KFt4VGEZLpRR_B0ekanTyQ3FVGLkdYufFuwi6mCZliitjyMQFGL2pAw_lvFMafVZuIFZTjszCKytHU8QbGxEG5F52lhnsf8CORAejAdSeRLf5p3kBNqQYs7L-17bnVVvb1L7qgqlIARjAlUgpu4uN7Axls1d_AkEkypH37aUwEJFqmn1chmkrxVEHcEq-jwnlp9jRWeBw7oOrLppcsPw_2WzZALuRhWmn9RC_hKuoj2iG3aYmRyz8eW7XO980-jY7pwOjKW66Z6jCAyBP0QHCL8/p.jpeg?size_mode=5"
+                                    class="d-block w-100" alt="second">
+                            </div>
+                            <div class="carousel-item" data-interval="250">
+                                <img src="https://uc7baafa2118ddde2b8c6029d3ef.previews.dropboxusercontent.com/p/thumb/AAYErGRghOWjhBSKY19yi964chb15KyOrP_v0wLFoCjpwVeRDAEDIxyroTB0O4_Pi3K3r3-viLbyz7qq__RgHvyLsbx2OPHlGL0c23fonay711Sm_GgmVEDlSOIih9KCqZvxw8ueCxx9Rr8ahSoZheBSHEW00pIsUD3_DYm-yPjK_tZm9uMTb18mG-6fV5UFBsIT-khJZLwYjU8IdF_PysD6pBg25yl5kH9NElB_0ECLmtqQSW3X5BoHgYTSZEd8ksaxl1Pc8yL64R9_LDeGMYBP5fVOwx2lZii7iwIpZo1gnbSFbsXOZEyDbJt0xZQ9e9hen45unMePVx34kfDdSNsg2Iyb0rzpamF__c4fmwjk1BIgWdiGk4SgXI_xjubpT4165mbmXHYp5IXM-VWhmbVc8Xozn1EXosyuKr6R45rCS-e2B4JVV5Gjmy1eYk1eS34tk3hG3sB9ykqGKRLDCLIeD6p9Zf_k2KzL1yHK5DbfRGXo7xtvILtd0Z_MPP_jB-A/p.jpeg?size_mode=5"
+                                    class="d-block w-100" alt="third">
+                            </div>
+                            <div class="carousel-item" data-interval="250">
+                                <img src="https://uc5bdf51791531bd78afdd1e7057.previews.dropboxusercontent.com/p/thumb/AAYlFS4G4-MrRNoOHaoCez_zgK1n1xCgUXzC7tIDb-k1t8PUwAc1hrs6k50js_Cc_jxQcYF02pd-9eMcoIH4ozS9dRFvaJ2F5bOyfNO0rgrTQh9HOa7gkqW3LxQNSXP8mvnF0eQ39mx9FLchqppmREsX9wuq7gPxye6SgerCnUr72kAqwFoM1G2vaWHkMWwwMMysEPYIsPufbCAYq8aMR4NXlDWYnU0AlhPwagGaTEDr9zx-jn2I8NrEREjWGTDKzRzF6S78conkPyWsT7DxRIUHXLpKQqZ5sJO8XphWQuzKrxIvSjffr8kQJFuaPtOzz3rbePsr7ccJwbv_52WdzyhzU9kbLnVA1ezP0LIZud4OYEOVAcnElmi8wMQon3LMIpCjKbUY8WpWL41IHPxrtoX7iqkIZ2ooSE23IdSj0Tyu__6IDILdjEVKBusRxCdsEAUYslJjbC-0k7Ee_BoQCymEnu8L_wu_VvH5ZFjmJ0e-2TjaIQDZarVFpHTA4tqGsVw9cYI7RD0usvHa6h0v-zvcaF5Tjmj8ZtSMpYJc9a3w46SPBfUoLAUtsbHNiI0RAYw/p.jpeg?size_mode=5"
+                                    class="d-block w-100" alt="fourth">
+                            </div>
+                            <div class="carousel-item" data-interval="250">
+                                <img src="https://uc7baafa2118ddde2b8c6029d3ef.previews.dropboxusercontent.com/p/thumb/AAYErGRghOWjhBSKY19yi964chb15KyOrP_v0wLFoCjpwVeRDAEDIxyroTB0O4_Pi3K3r3-viLbyz7qq__RgHvyLsbx2OPHlGL0c23fonay711Sm_GgmVEDlSOIih9KCqZvxw8ueCxx9Rr8ahSoZheBSHEW00pIsUD3_DYm-yPjK_tZm9uMTb18mG-6fV5UFBsIT-khJZLwYjU8IdF_PysD6pBg25yl5kH9NElB_0ECLmtqQSW3X5BoHgYTSZEd8ksaxl1Pc8yL64R9_LDeGMYBP5fVOwx2lZii7iwIpZo1gnbSFbsXOZEyDbJt0xZQ9e9hen45unMePVx34kfDdSNsg2Iyb0rzpamF__c4fmwjk1BIgWdiGk4SgXI_xjubpT4165mbmXHYp5IXM-VWhmbVc8Xozn1EXosyuKr6R45rCS-e2B4JVV5Gjmy1eYk1eS34tk3hG3sB9ykqGKRLDCLIeD6p9Zf_k2KzL1yHK5DbfRGXo7xtvILtd0Z_MPP_jB-A/p.jpeg?size_mode=5"
+                                    class="d-block w-100" alt="fifth">
+                            </div>
 
 
 
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3"></div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-
 
     </div>
 
 </body>
 <footer>
-    <!-- Footer -->
-    <footer class="page-footer font-small blue pt-4">
-
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
-
-            <!-- Grid row -->
-            <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
-
-                    <!-- Content -->
-                    <h5 class="text-uppercase">Footer Content</h5>
-                    <p>Here you can use rows and columns here to organize your footer content.</p>
-
-                </div>
-                <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row -->
-
+    <div id="Contact" class=" row d-flex align-items-left justify-content-left footer">
+        <div class="foot col-sm-4">
+            <h2>Hours</h2>
+            <p>Monday – Closed</p>
+            <p>Tuesday – Closed</p>
+            <p>Wednesday – 4pm to 12am</p>
+            <p>Thursday – 4pm to 12am</p>
+            <p>Fridays – 4pm to 2am</p>
+            <p>Saturday 2pm to 2am</p>
+            <p>Sunday 12pm to 10pm</p>
         </div>
-        <!-- Footer Links -->
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        <div class="foot col-sm-4">
+            <h2>Find Us</h2>
+            <a href="https://www.google.com/maps/place/205+N+Peoria+St,+Chicago,+IL+60607/@41.8858766,-87.6517933,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2cd075b7bdb9:0xfdf5a420399759f6!8m2!3d41.8858766!4d-87.6496046"
+                target="_blank" target="_blank">205
+                N Peoria St</a><br>
+            <a href="https://www.google.com/maps/place/205+N+Peoria+St,+Chicago,+IL+60607/@41.8858766,-87.6517933,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2cd075b7bdb9:0xfdf5a420399759f6!8m2!3d41.8858766!4d-87.6496046"
+                target="_blank">Chicago,
+                IL 60607</a><br>
+            <a href="tel:312.989.9801">(312)989-9801</a>
         </div>
-        <!-- Copyright -->
-
-    </footer>
-    <!-- Footer -->
+        <div class="foot col-sm-4">
+            <h2>Follow Us</h2>
+            <a class="link" href="https://www.instagram.com/fultonmarketcompany/" target="_blank"><i
+                    class="fab fa-instagram fa-4x mx-3"></i></a>
+            <a class="link" href="https://www.facebook.com/fultonmarketcompany/?ref=br_rs" target="_blank"><i
+                    class="fab fa-facebook fa-4x mx-3"></i></a>
+        </div>
+    </div>
 </footer>
 
 </html>

@@ -1,9 +1,26 @@
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
-  }
+  height: 20rem;
+  width: 100%;
+  background-color:black;
+  color: white;
+  text-align: left;
+}
+p, h2,a{
+  text-align: left;
+  
+}
+p,a{
+  line-height: 1rem;
+  margin-left: 5rem;
+}
+h2, a {
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+p{
+  margin-top: 1rem;
+}
+.link{
+    margin-left:2rem;
+    margin-top: rem;   
+}
