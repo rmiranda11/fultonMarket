@@ -1,15 +1,48 @@
+
+.about {
+    background-color:#e7e3e4;
+    background-size:100%;
+    background-repeat: no-repeat;
+    
+}
+
 .footer {
     height: 20rem;
     width: 100%;
-    background-color: black;
+    background-color:black;
     color: white;
     text-align: left;
 
   }
 
-/* .foot{
-    
-} */
+.front {
+    height: 20rem;
+    width:25rem;
+    margin-top:3rem;
+    margin-bottom: 2rem;
+}
+
+.front-txt{
+    color:white;
+    /* color:#144475; */
+    font-size: 1.7rem;
+    line-height:1.9rem;
+    font-family: 'Sahitya', serif;
+    font-size:1.4rem;
+    text-align: left;
+    margin-top:1rem;
+    margin-left:4rem;
+    /* font-weight: bold; */
+    text-shadow:.1rem .1rem black;
+
+}
+
+.title {
+    font-size:2.5rem;
+    font-family: 'Kaushan Script', cursive;
+    color:#fcbdb2;
+}
+
 
   p, h2,a{
     text-align: left;
@@ -30,6 +63,20 @@
 
   .link{
       margin-left:2rem;
-      margin-top: rem;   
+      margin-top: 2rem;   
 
   }
+
+  body{
+    background-color: #000000;
+  padding: 0px;
+  margin: 0px;
+}
+
+#gradient
+{
+ width: 100%;
+ height: 800px;
+ padding: 0px;
+ margin: 0px;
+}
