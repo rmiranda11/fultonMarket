@@ -1,7 +1,43 @@
+body{
+    font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+    background-image: url("./images/musicBackground.jpg")
+}
+
+.container-fluid{
+    width: 100%;
+    margin: 0%;
+    padding: 0;
+}
+
+
+.navbar-brand{
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+
+}
+
+.nav-link{
+    color: white;
+    font-size: 110%;
+}
+
+.nav-link:hover{
+    color: seagreen;
+    font-size: 125%;
+}
+
 #logo{
-    background-image: url(./images/musicBackground.jpg);
-    justify-content: space-between;
-    padding: 15%;
-    background-repeat: no-repeat;
-    
+    width: 100%;
+    height: 30%; 
+    position: relative;
+    overflow: hidden;
+}
+#logo #background{
+    width: 100%;
+}
+#fultonMarketLogo{
+    width: 60%;
+    margin: 0;
+    padding: 0;
 }
