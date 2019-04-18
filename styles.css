@@ -1,5 +1,5 @@
 .footer {
-  height: 20rem;
+  height: 100%;
   width: 100%;
   background-color:black;
   color: white;
@@ -24,3 +24,162 @@ p{
     margin-left:2rem;
     margin-top: rem;   
 }
+
+
+
+.about {
+  background-color:#e7e3e4;
+  width: 100%;
+  background-size:100%;
+  background-repeat: no-repeat;
+  
+}
+
+.fa-instagram, .fa-facebook {
+color:rgb(231, 42, 42);
+}
+.footer {
+  height: 20rem;
+  width: 100%;
+  background-color:black;
+  color: white;
+  text-align: left;
+
+}
+
+.front {
+  height: 20rem;
+  width:25rem;
+  margin-top:3rem;
+  margin-bottom: 2rem;
+  
+  
+}
+
+.front-txt{
+  color:white;
+  font-size: 1.7rem;
+  line-height:1.9rem;
+  font-family: 'Sahitya', serif;
+  font-size:1.4rem;
+  text-align: left;
+  margin-top:1rem;
+  margin-left:4rem;
+  margin-right:1rem;
+  text-shadow:.1rem .1rem black;
+
+}
+
+.title {
+  font-size:2.5rem;
+  font-family: 'Kaushan Script', cursive;
+  color:#fcbdb2;
+  text-shadow:.1rem .1rem black;
+  
+
+}
+
+
+p, h2,a{
+  text-align: left;
+  
+}
+
+p,a{
+  line-height: 1rem;
+  margin-left: 5rem;
+}
+h2, a {
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+
+p{
+  margin-top: 1rem;
+}
+
+.my-3{
+  color:white;
+  font-size: 2.3rem;
+  text-shadow: .1rem .1rem black;
+  margin:1rem;
+  font-family: 'Kaushan Script', cursive;
+
+}
+
+.link{
+    margin-left:2rem;
+    margin-top: 2rem;   
+
+}
+
+body{
+  background-color: #000000;
+padding: 0px;
+margin: 0px;
+}
+
+#gradient
+{
+width: 100%;
+height: 70rem;
+padding: 0px;
+margin: 0px;
+}
+
+div#maintwo{
+    width:51.875rem;
+    height:40.625rem;
+    margin:0 auto;
+    font-family:'Ubuntu',sans-serif
+    }
+    div#form_sample{
+    text-align:center;
+    border:1px solid #2BC1F2;
+    width:300px;
+    padding:0 50px 15px;
+    margin-top:20px;
+    box-shadow:0 0 15px white;
+    border-radius:6px;
+    float:left;
+    color:white;
+    }
+    #maintwo h1{
+    margin-top:30px
+    }
+    hr{
+    margin-top:-5px
+    }
+    label{
+    float:left;
+    font-size:16px
+    }
+    input[type="text"]{
+    width:100%;
+    margin-top:10px;
+    height:35px;
+    margin-bottom:25px;
+    padding:10px;
+    border:3px solid #2BC1F2
+    }
+    textarea{
+    width:100%;
+    border:3px solid #2BC1F2;
+    padding:10px;
+    margin-bottom:25px;
+    margin-top:10px;
+    height:100px;
+    resize:none
+    }
+    .text-form-area{
+    width:100%;
+    padding:10px 45px;
+    background-color:rgb(231, 42, 42);
+    border:none;
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    font-family:'Ubuntu',sans-serif
+    }

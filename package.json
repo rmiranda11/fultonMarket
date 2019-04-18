@@ -1,0 +1,22 @@
+{
+  "name": "fultonmarket",
+  "version": "1.0.0",
+  "description": "holds our packages",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmiranda11/fultonMarket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmiranda11/fultonMarket/issues"
+  },
+  "homepage": "https://github.com/rmiranda11/fultonMarket#readme",
+  "dependencies": {
+    "firebase": "^5.9.4"
+  }
+}
