@@ -1,11 +1,11 @@
 var colors = new Array(
-    [143,106,118],
-    [110,148,135],
-    [106,118,143],
-    [143,131,106],
-    [143,88,44]);
-    // [255,128,0]);
-  
+    [86,125,57], //green
+    [155,36,27], // brick red
+    // [72,144,168], // light blue 
+    // [70,4,124], //purple
+    [219,149,19],
+    [9,87,160] //brown
+    );   
   var step = 0;
   //color table indices for: 
   // current color left
@@ -58,3 +58,73 @@ var colors = new Array(
   }
   
   setInterval(updateGradient,10);
+
+
+  ////////////////////////////////////////////////////////////
+  ///////////////////  Form //////////////////////////////////
+  ///////////////////////////////////////////////////////////
+
+  
+$(function()
+{
+    function after_form_submitted(data)
+    {
+        if(data.result == 'success')
+        {
+            $('form#reused_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        }
+        else
+        {
+            $('#error_message').append('<ul></ul>');
+
+            jQuery.each(data.errors,function(key,val)
+            {
+                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+            });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+                $btn = $(this);
+                label = $btn.prop('orig_label');
+                if(label)
+                {
+                    $btn.prop('type','submit' );
+                    $btn.text(label);
+                    $btn.prop('orig_label','');
+                }
+            });
+
+        }//else
+    }
+
+	$('#reused_form').submit(function(e)
+      {
+        e.preventDefault();
+
+        $form = $(this);
+        //show some response on the button
+        $('button[type="submit"]', $form).each(function()
+        {
+            $btn = $(this);
+            $btn.prop('type','button' );
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+        });
+
+
+                    $.ajax({
+                type: "POST",
+                url: 'handler.php',
+                data: $form.serialize(),
+                success: after_form_submitted,
+                dataType: 'json'
+            });
+
+      });
+});
+
