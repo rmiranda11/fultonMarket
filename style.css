@@ -1,7 +1,7 @@
 body{
     font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
     background-image: url("./images/musicBackground.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
 }
 
@@ -72,7 +72,7 @@ body { background-image: radial-gradient( cover, rgba(92,100,111,1) 0%,rgba(31,3
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.2), 0 1px 0 #fff;
 }
-input[type="password"], input[type="text"] {
+.password, .username {
   background: url('http://i.minus.com/ibhqW9Buanohx2.png') center left no-repeat, linear-gradient(top, #d6d7d7, #dee0e0);
   border: 1px solid #a1a3a3;
   border-radius: 4px;
@@ -126,7 +126,7 @@ input[type="checkbox"]:checked + .toggle { background-position: 0 -16px }
   transition: color .4s;
 }
 .forgot:hover { color: #3b3b3b }
-input[type="submit"] {
+.signin {
   width:240px;
   height:35px;
   display:block;
