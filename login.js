@@ -8,9 +8,9 @@ var config = {
 };
 firebase.initializeApp(config);
 
-$(".signin").on("click", () => {
-    const email = $(".email").val();
-    const pass = $(".password").val();
+$("#signin").on("click", () => {
+    const email = $("#username").val();
+    const pass = $("#password").val();
     const auth = firebase.auth();
     $(".errorText").empty()
     //If statement to validate user input
