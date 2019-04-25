@@ -60,8 +60,10 @@
     <link rel="stylesheet" href="./resetCSS.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles.css">
-    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
 
+    <!-- firebase Links
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" /> -->
 </head>
 
 <body>
@@ -272,6 +274,25 @@
         </div>
     </div>
 
+
+
+    <!-- firebase auth code
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD2HRtYIr8xlL7GSbhkiSModo8ngCbFCpE",
+            authDomain: "fultonmarketco-bf129.firebaseapp.com",
+            databaseURL: "https://fultonmarketco-bf129.firebaseio.com",
+            projectId: "fultonmarketco-bf129",
+            storageBucket: "fultonmarketco-bf129.appspot.com",
+            messagingSenderId: "980423171597"
+        };
+        firebase.initializeApp(config);
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script> -->
 
     <script src="./app.js"></script>
 </body>
