@@ -179,23 +179,34 @@ $( "#link1" ).click(function() {
   $( "#about" ).hide();
   $("#contact").hide();
   $("#footer").show();
+  $("#menu").hide();
 
 });
 
 $( "#link2" ).click(function() {
-  $( "#about" ).show(600);
+  $( "#about" ).show(400);
     $( "#home" ).hide();
     $("#contact").hide();
     $("#footer").show();
+    $("#menu").hide();
+});
 
-
+$( ".link3" ).click(function() {
+  $( "#menu" ).show(400);
+    $( "#home" ).hide();
+    $("#contact").hide();
+    $("#footer").show();
+    $("#about").hide();
+    console.log("yo");
 });
 
 $( ".link4" ).click(function() {
-  $( "#contact" ).show(600);
+  $( "#contact" ).show(400);
   $( "#home" ).hide();
   $("#about").hide();
   $("#footer").hide();
+  $("#menu").hide();
+
 
 });
 

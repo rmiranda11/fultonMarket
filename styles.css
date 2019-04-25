@@ -113,6 +113,15 @@ p{
 
 }
 
+.menu{
+  margin:5rem;
+}
+
+.menu-pic:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
 .link{
     margin-left:2rem;
     margin-top: 2rem;   
