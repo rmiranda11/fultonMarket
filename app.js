@@ -1,48 +1,42 @@
-// Requiring necessary npm packages
-var express = require("express");
-var session = require("express-session");
-// Requiring passport as we've configured it
-var passport = require("./config/passport");
-
 // Firebase App (the core Firebase SDK) is always required and must be listed first
-import * as firebase from "firebase/app";
+// import * as firebase from "firebase/app";
 
 // Add the Firebase products that you want to use
-import "firebase/auth";
-import "firebase/database";
+// import "firebase/auth";
+// import "firebase/database";
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
 
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
-  // ...
-};
+// // TODO: Replace the following with your app's Firebase project configuration
+// const firebaseConfig = {
+//   // ...
+// };
 
-// Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8080;
-var db = require("./models");
+// // Setting up port and requiring models for syncing
+// var PORT = process.env.PORT || 8080;
+// var db = require("./models");
 
-// Creating express app and configuring middleware needed for authentication
-var app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+// // Creating express app and configuring middleware needed for authentication
+// var app = express();
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+// app.use(express.static("public"));
+// // We need to use sessions to keep track of our user's login status
+// app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+// app.use(passport.initialize());
+// app.use(passport.session());
 
-// Requiring our routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+// // Requiring our routes
+// require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 
-// Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function () {
-  app.listen(PORT, function () {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-  });
-});
+// // Syncing our database and logging a message to the user upon success
+// db.sequelize.sync().then(function () {
+//   app.listen(PORT, function () {
+//     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+//   });
+// });
 
 var colors = new Array(
   [86, 125, 57], //green
@@ -164,6 +158,52 @@ $(function () {
 
   });
 });
+
+/////////////////////////////////////
+////////// Nav Bar ////////////////
+
+// function showonlyone(thechosenone) {
+//   $('.home').each(function(index) {
+//        if ($(this).attr("id") == thechosenone) {
+//             $(this).show(200);
+//        }
+//        else {
+//             $(this).hide(600);
+//        }
+//   });
+// };
+
+
+$( "#link1" ).click(function() {
+  $( "#home" ).show(400);
+  $( "#about" ).hide();
+  $("#contact").hide();
+  $("#footer").show();
+
+});
+
+$( "#link2" ).click(function() {
+  $( "#about" ).show(600);
+    $( "#home" ).hide();
+    $("#contact").hide();
+    $("#footer").show();
+
+
+});
+
+$( ".link4" ).click(function() {
+  $( "#contact" ).show(600);
+  $( "#home" ).hide();
+  $("#about").hide();
+  $("#footer").hide();
+
+});
+
+
+
+
+///////////// Nav end //////////////////
+////////////////////////////////////////
 
 
 

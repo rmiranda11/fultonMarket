@@ -1,3 +1,7 @@
+.contact1{
+  margin:3rem;
+}
+
 .footer {
   height: 100%;
   width: 100%;
@@ -40,7 +44,7 @@ p{
 color:rgb(231, 42, 42);
 }
 .footer {
-  height: 20rem;
+  height: 100%;
   width: 100%;
   background-color:black;
   color: white;
