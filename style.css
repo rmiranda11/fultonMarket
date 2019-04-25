@@ -1,6 +1,6 @@
 body{
     font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
-    background-image: url("./images/musicBackground.jpg");
+    background-image: url("./images/musicBackground70.png");
     background-repeat: repeat-y;
     background-size: cover;
 }
@@ -21,12 +21,12 @@ body{
 
 .nav-link{
     color: white;
-    font-size: 110%;
+    font-size:1.2rem;
+  font-family: 'Kaushan Script', cursive;
 }
 
 .nav-link:hover{
     color: seagreen;
-    font-size: 125%;
 }
 
 #logo{

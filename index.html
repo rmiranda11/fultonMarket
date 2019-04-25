@@ -45,7 +45,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
     <!-- {{!-- Favicon Link --}} -->
-    <link rel="shortcut icon" href="./Images/dog.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="" type="image/x-icon">
 
     <!-- {{!-- Fontawesome --}} -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -68,6 +68,11 @@
 
 <body>
 
+
+    <!-- /////////////////////////////////
+////////// NavBar///////////////
+//////////////////////////////// -->
+
     <div class="container-fluid">
 
         <nav id="NavbarHeader" class="navbar navbar-expand-lg">
@@ -87,10 +92,10 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#carouselExampleFade">Home</a>
+                        <a class="nav-link link1" id="link1" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Fulton Market</a>
+                        <a class="nav-link link2" id="link2" href="#">About Fulton Market</a>
                     </li>
                 </ul>
 
@@ -105,10 +110,10 @@
                 <!-- Other two links for the NavBar -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu/Reservtion</a>
+                        <a class="nav-link link3" href="#">Menu/Reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Contact">Contact</a>
+                        <a class="nav-link link4" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -127,12 +132,18 @@
             </div>
         </section>
 
-        <div class="fluid-container">
+        <!-- ///////// Nav End //////////////////
+////////////////////////////////////
+
+///////////////////////////////////
+////// Home Div /////////////////// -->
+
+
+        <div class="home fluid-container" id="home">
             <div class="row ">
 
 
-                <div class="col-md-3 d-flex justify-content-center align-items-center" style="color: white;">upcoming
-                </div>
+                <div class=" col-md-3 d-flex justify-content-center align-items-center" style="color: white;"> </div>
 
                 <!-- this col size 6 to center carousel -->
                 <div class="col-md-6 d-flex justify-content-center">
@@ -176,7 +187,7 @@
 
                 </div>
                 <!-- empty col to center carousel -->
-                <div class="col-md-3 d-flex justify-content-center align-items-center" style="color: white;">events
+                <div class="col-md-3 d-flex justify-content-center align-items-center" style="color: white;">
                 </div>
 
                 <!-- <div id="Special_Events" class="col-md-6 d-flex justify-content-center">
@@ -186,7 +197,7 @@
         </div>
 
         <!-- "About Us" -->
-        <div id="gradient" class=" about">
+        <div id="about" class="home" style="display: none">
             <div class="row d-flex">
                 <div class="col-sm-6">
                     <h2 class="title">Prologue</h2>
@@ -213,9 +224,46 @@
 
     </div>
 
+    <!-- /////////////////////////////////////////
+////////////// Menu ///////////////////// -->
 
+    <div id="menu" style="display: none">
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-center">
+                <h2 class="title" style="font-size: 4.5rem; margin-left:-2.0rem;">Menu</h2>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-sm-4 menu">
 
+                <div style="margin:2rem;">
+                    <p class="title d-flex justify-content-center"
+                        style="margin:1rem;font-size: 2rem; margin-left:-1.8rem; color: white">Drinks</p><img
+                        class="menu-pic img-fluid img-thumbnail mx-auto" type="button" src="./images/slideshow/Wine.jpg"
+                        onclick="window.open('./2019 Menu (1)-2.pdf', '_blank', 'fullscreen=yes'); return false;">
+                </div>
+            </div>
 
+            <div class="col-sm-4 menu">
+
+                <div style="margin:2rem;">
+                    <p class="title d-flex justify-content-center"
+                        style="margin:1rem;font-size: 2rem; margin-left:-1.8rem; color: white;">Food</p><img
+                        class="menu-pic img-fluid img-thumbnail mx-auto" type="button" src="./images/slideshow/Ribs.jpg"
+                        onclick="window.open('./2019 Menu (1)-1.pdf', '_blank', 'fullscreen=yes'); return false;">
+                </div>
+
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 d-flex justify-content-center">
+                <h2 class="title" style="font-size: 4.5rem; margin-left:-2.0rem;">Reserve</h2>
+            </div>
+                <div class="row">
+                <script type='text/javascript' style="color:white;" src='//www.opentable.com/widget/reservation/loader?rid=729250&type=standard&theme=wide&iframe=true&overlay=false&domain=com&lang=en-US'></script>
+                </div>
+        </div>
+    </div>
 
 
     <!-- <div class="row div col-md-12">
@@ -223,8 +271,10 @@
             src='//www.opentable.com/widget/reservation/loader?rid=729250&type=standard&theme=wide&iframe=true&overlay=false&domain=com&lang=en-US'></script>
     </div> -->
 
+
+
     <!-- events section -->
-    <div id="gradient" class="contact">
+    <div id="contact" class="home" style="display: none">
         <div class="row d-flex">
             <div class="front col-sm-4 d-flex align-items-center justify-content-center">
                 <img class="front d-flex justify-content-center img-fluid img-thumbnail mx-auto" src="./images/pic6.jpg"
@@ -248,7 +298,7 @@
         </div>
 
         <hr>
-        <div class="row d-flex">
+        <div class="contact1 row d-flex">
             <div class="col-sm-6 d-flex justify-content-center align-items-left" id="main">
 
                 <div id="form_sample">
@@ -274,33 +324,16 @@
         </div>
     </div>
 
+    <!-- //////// Home Div End ///////////////
+///////////////////////////////////// -->
 
 
-    <!-- firebase auth code
-    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyD2HRtYIr8xlL7GSbhkiSModo8ngCbFCpE",
-            authDomain: "fultonmarketco-bf129.firebaseapp.com",
-            databaseURL: "https://fultonmarketco-bf129.firebaseio.com",
-            projectId: "fultonmarketco-bf129",
-            storageBucket: "fultonmarketco-bf129.appspot.com",
-            messagingSenderId: "980423171597"
-        };
-        firebase.initializeApp(config);
-
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-    </script> -->
-
-    <script src="./app.js"></script>
 </body>
 
-<div class="container-fluid">
+<div class="footer container-fluid" id="footer">
 
     <footer>
-        <div id="Contact" class=" row d-flex align-items-left justify-content-left footer">
+        <div id="footer" class=" row d-flex align-items-left justify-content-left footer">
             <div class="foot col-sm-4">
                 <h2>Hours</h2>
                 <p>Monday – Closed</p>
@@ -332,6 +365,7 @@
     </footer>
 </div>
 
+<script src="./app.js"></script>
 
 
 </html>

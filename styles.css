@@ -1,3 +1,7 @@
+.contact1{
+  margin:3rem;
+}
+
 .footer {
   height: 100%;
   width: 100%;
@@ -40,7 +44,7 @@ p{
 color:rgb(231, 42, 42);
 }
 .footer {
-  height: 20rem;
+  height: 100%;
   width: 100%;
   background-color:black;
   color: white;
@@ -107,6 +111,15 @@ p{
   margin:1rem;
   font-family: 'Kaushan Script', cursive;
 
+}
+
+.menu{
+  margin:5rem;
+}
+
+.menu-pic:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
 }
 
 .link{
