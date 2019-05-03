@@ -22,6 +22,15 @@
     <link rel="stylesheet" href="./resetCSS.css">
     <link rel="stylesheet" type="text/css" href="./styles.css">
 
+    <!-- {{!-- Moment  --}} -->
+    <script src="system.js"></script>
+<script>
+  System.config({
+    baseURL: '/app'
+  });
+
+  System.import('moment.js');
+ </script>
 
     <!-- {{!-- Google Font --}} -->
     <link
@@ -60,10 +69,8 @@
     <link rel="stylesheet" href="./resetCSS.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
 
-    <!-- firebase Links
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" /> -->
 </head>
 
 <body>
@@ -315,7 +322,7 @@
                         width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <br>
-                <h2 class="my-3 d-flex justify-content-center">Follow us on Social Media</h2>
+                <h2 class="my-3 d-flex justify-content-center">Follow Us</h2>
                 <span class=" fa-lg d-flex justify-content-center align-items-center">
 
                     <a href="https://www.instagram.com/lineage_premier/"><i class="fab fa-instagram fa-4x mx-3"></i></a>
@@ -328,7 +335,6 @@
 
     <!-- //////// Home Div End ///////////////
 ///////////////////////////////////// -->
-
 
 </body>
 
@@ -410,9 +416,8 @@
 
         </div>
 
-
-
     </div>
+
 </div>
 
 <!-- firebase auth code -->
@@ -422,6 +427,7 @@
 <!-- JS scripts -->
 <script src="./app.js"></script>
 <script src="./login.js"></script>
+<script src="./admin.js"></script>
 
 
 </html>

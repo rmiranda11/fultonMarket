@@ -1,3 +1,10 @@
+.address{
+  line-height: 2rem;
+}
+
+.carousel{
+  margin-bottom:2rem;
+}
 .contact1{
   margin:3rem;
 }
@@ -50,6 +57,16 @@ color:rgb(231, 42, 42);
   color: white;
   text-align: left;
 
+}
+
+.foot{
+  margin-bottom:2rem;
+}
+
+.foot-title{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .front {
