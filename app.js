@@ -175,7 +175,7 @@ $(function () {
 
 
 $( "#link1" ).click(function() {
-  $( "#home" ).show(400);
+  $( "#home" ).show(300);
   $( "#about" ).hide();
   $("#contact").hide();
   $("#footer").show();
@@ -184,7 +184,7 @@ $( "#link1" ).click(function() {
 });
 
 $( "#link2" ).click(function() {
-  $( "#about" ).show(400);
+  $( "#about" ).show(300);
     $( "#home" ).hide();
     $("#contact").hide();
     $("#footer").show();
@@ -192,20 +192,21 @@ $( "#link2" ).click(function() {
 });
 
 $( ".link3" ).click(function() {
-  $( "#menu" ).show(400);
+  $( "#menu" ).show(300);
     $( "#home" ).hide();
     $("#contact").hide();
     $("#footer").show();
     $("#about").hide();
-    console.log("yo");
 });
 
 $( ".link4" ).click(function() {
-  $( "#contact" ).show(400);
+  $( "#contact" ).show(300);
   $( "#home" ).hide();
   $("#about").hide();
-  $("#footer").hide();
   $("#menu").hide();
+  $("#footer").hide();
+
+  
 
 
 });

@@ -20,20 +20,33 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./resetCSS.css">
     <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+
+        <!-- {{!-- Moment  --}} -->
+        <script src="system.js"></script>
+        <script>
+          System.config({
+            baseURL: '/app'
+          });
+        
+          System.import('moment.js');
+         </script>
+
 
 </head>
 
 <body>
+    <h1 class="title d-flex justify-content-center" style="color:teal;text-shadow: whitesmoke .1rem .1rem 0rem; margin-bottom:2rem;">Welcome Admin</h1>
     <div class="admin">
-        <div class="row">
-            <div class="col-sm-4">
-                    <div class="card" style="width: 18rem;">
+        <div class="row" id="admin-row">
+            <!-- <div class="col-sm-4">
+                    <!-- <div class="card" style="width: 18rem;">
                             <div class="card-body">
                               <h5 class="card-title">Name</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
                                 <p class="card-text">Email@EMAIL.COM</p>
-                            </div>
-                          </div>
+                            </div> -->
+                          </div> -->
 
             </div>
         </div>
