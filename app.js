@@ -204,7 +204,7 @@ $( ".link4" ).click(function() {
   $( "#home" ).hide();
   $("#about").hide();
   $("#menu").hide();
-  $("#footer").hide();
+  $(".footer").hide();
 
   
 
@@ -216,7 +216,6 @@ $( ".link4" ).click(function() {
 
 ///////////// Nav end //////////////////
 ////////////////////////////////////////
-
 
 
 

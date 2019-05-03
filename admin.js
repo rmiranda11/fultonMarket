@@ -12,19 +12,24 @@ firebase.initializeApp(config);
 // const db = firebase.firestore();
 const database = firebase.database();
 
+var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+
 
 $("#Submit").on("click", function (event) {
     event.preventDefault();
+
     var nameInput = $("#nameInput").val();
     var emailInput = $("#emailInput").val();
     var messageInput = $("#messageInput").val();
+    
+
 
     var newMessage = {
         name: {
             user: nameInput,
             email: emailInput,
             content: messageInput,
-            // erase:deleteRow    
+            time: currentTime   
         }
     }
 
@@ -37,6 +42,8 @@ $("#Submit").on("click", function (event) {
     $("#emailInput").val(emailInput);
     $("#messageInput").val(messageInput);
 
+    
+
 });
 
 
@@ -46,33 +53,27 @@ database.ref("Messages").on("child_added", function (childSnapshot) {
     var nameInput = childSnapshot.val().name.user;
     var emailInput = childSnapshot.val().name.email;
     var messageInput = childSnapshot.val().name.content;
-    var id = childSnapshot
-    // var deleteRow = childSnapshot.val().name.erase;
-    // var deleteRow = ('<button type="button" class="btn btn-danger" id="delete">Delete</button>');
+    var timeSlot = childSnapshot.val().name.time;
 
-    // console.log(nameInput);
-    // console.log(emailInput);
-    // console.log(messageInput);
 
     var key = childSnapshot.key;
-    console.log(key);
+
 
 
     let newCard = (`
-<div class="card" style="width: 26rem; margin:2rem;">
-<button class=" card btn btn-danger xbutton d-flex justify-content-center" type="button" id="${key}" style="color:red; font-size:1rem font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;">Delete</button>
+<div class="card" style="width: 26rem; margin:2.5rem;font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;">
+<button class=" card btn btn-danger xbutton d-flex justify-content-center" type="button" id="${key}" style="color:red; font-size:1rem; font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;">Delete</button>
 <div class="card-body">
     <h5 class="card-title">${nameInput}</h5>
     <p class="card-text">${emailInput}</p>
     <p class="card-text">${messageInput}</p>
+    <p class="card-text" style="font-weight:bold;">${timeSlot}</p>
 </div>
 </div>`);
 
     $("#admin-row").append(newCard);
 
 
-    var currentTime = moment();
-    console.log(currentTime);
 
 
 });

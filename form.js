@@ -61,4 +61,6 @@ submitelement.setAttribute("type", "submit");
 submitelement.setAttribute("name", "dsubmit");
 submitelement.setAttribute("value", "Submit");
 submitelement.setAttribute("id", "Submit");
+submitelement.setAttribute("data-toggle", "modal");
+submitelement.setAttribute("data-target","#exampleModal");
 createform.appendChild(submitelement);
