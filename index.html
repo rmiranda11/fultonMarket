@@ -154,6 +154,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-interval="250">
                                 <img src="./images/slideshow/All_Drinks.jpg" class="d-block w-100" alt="Drinks">
+                                <!-- <img src="./images/musicBackground.jpg" class="d-block w-100"> -->
                             </div>
                             <div class="carousel-item" data-interval="250">
                                 <img src="./images/slideshow/Drinks_And_Meal.jpg" class="d-block w-100"
@@ -349,7 +350,73 @@
 
 </body>
 
+<div class="footer container-fluid" id="footer">
 
+    <footer>
+        <div id="footer" class=" row d-flex align-items-left justify-content-left footer">
+            <div class="foot col-sm-4">
+                <h2>Hours</h2>
+                <p>Monday – Closed</p>
+                <p>Tuesday – Closed</p>
+                <p>Wednesday – 4pm to 12am</p>
+                <p>Thursday – 4pm to 12am</p>
+                <p>Fridays – 4pm to 2am</p>
+                <p>Saturday 2pm to 2am</p>
+                <p>Sunday 12pm to 10pm</p>
+            </div>
+            <div class="foot col-sm-4">
+                <h2>Find Us</h2>
+                <a href="https://www.google.com/maps/place/205+N+Peoria+St,+Chicago,+IL+60607/@41.8858766,-87.6517933,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2cd075b7bdb9:0xfdf5a420399759f6!8m2!3d41.8858766!4d-87.6496046"
+                    target="_blank" target="_blank">205
+                    N Peoria St chicago</a><br>
+                <a href="https://www.google.com/maps/place/205+N+Peoria+St,+Chicago,+IL+60607/@41.8858766,-87.6517933,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2cd075b7bdb9:0xfdf5a420399759f6!8m2!3d41.8858766!4d-87.6496046"
+                    target="_blank">Chicago,
+                    IL 60607</a><br>
+                <a href="tel:312.989.9801">(312)989-9801</a>
+            </div>
+            <div class="foot col-sm-4">
+                <h2>Follow Us</h2>
+                <a class="link" href="https://www.instagram.com/fultonmarketcompany/" target="_blank"><i
+                        class="fab fa-instagram fa-4x mx-3"></i></a>
+                <a class="link" href="https://www.facebook.com/fultonmarketcompany/?ref=br_rs" target="_blank"><i
+                        class="fab fa-facebook fa-4x mx-3"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Sign In</h3>
+                </div>
+                <div class="card-body">
+                    <form id="login-form">
+                        <div class="input-group form-group">
+                            <input id="login-email" type="text" class="form-control" placeholder="email">
+
+                        </div>
+                        <div class="input-group form-group">
+                            <input id="login-password" type="password" class="form-control" placeholder="password">
+                        </div>
+                        <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="btn float-right login_btn">
+                            <button class="btn" id="logout">logout</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
+
+<<<<<<< HEAD
 <footer>
     <div id="footer" class="footer row d-flex align-items-left justify-content-center">
         <div class="foot col-sm-4">
@@ -359,29 +426,31 @@
             <p>Friday – 4pm to 2am</p>
             <p>Saturday 2pm to 2am</p>
             <p>Sunday 12pm to 10pm</p>
+=======
+>>>>>>> 205dd331dca5039d91cbd0143c6087fd1a6101dc
         </div>
-        <div class="foot address col-sm-4">
-            <h2 class="foot-title">Find Us</h2>
-            <a href="https://www.google.com/maps/place/205+N+Peoria+St,+Chicago,+IL+60607/@41.8858766,-87.6517933,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2cd075b7bdb9:0xfdf5a420399759f6!8m2!3d41.8858766!4d-87.6496046"
-                target="_blank" target="_blank">205
-                N Peoria St</a><br>
-            <a href="https://www.google.com/maps/place/205+N+Peoria+St,+Chicago,+IL+60607/@41.8858766,-87.6517933,17z/data=!3m1!4b1!4m5!3m4!1s0x880e2cd075b7bdb9:0xfdf5a420399759f6!8m2!3d41.8858766!4d-87.6496046"
-                target="_blank">Chicago,
-                IL 60607</a><br>
-            <a href="tel:312.989.9801">(312)989-9801</a>
+
+
+        <div class="imagesUploader">
+            <progress value="0" max="100" id="uploader">0%</progress>
+            <input type="file" value="upload" id="fileButton" />
         </div>
-        <div class="foot col-sm-4">
-            <h2 class="foot-title">Follow Us</h2>
-            <a class="link" href="https://www.instagram.com/fultonmarketcompany/" target="_blank"><i
-                    class="fab fa-instagram fa-4x mx-3"></i></a>
-            <a class="link" href="https://www.facebook.com/fultonmarketcompany/?ref=br_rs" target="_blank"><i
-                    class="fab fa-facebook fa-4x mx-3"></i></a>
+
+        <div id="object">
+
         </div>
+
     </div>
-</footer>
+
 </div>
 
+<!-- firebase auth code -->
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+
+<!-- JS scripts -->
 <script src="./app.js"></script>
+<script src="./login.js"></script>
 <script src="./admin.js"></script>
 
 
