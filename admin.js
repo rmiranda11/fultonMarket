@@ -1,3 +1,10 @@
+// I PUT ALL THE LOGIC FROM HERE ON login.js makes woreking with alot easier
+
+
+// if you want to delete let me know
+
+
+
 // var config = {
 //     apiKey: "AIzaSyD2HRtYIr8xlL7GSbhkiSModo8ngCbFCpE",
 //     authDomain: "fultonmarketco-bf129.firebaseapp.com",
