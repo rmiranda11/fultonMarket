@@ -14,38 +14,38 @@ const firestore = firebase.firestore();
 const database = firebase.database();
 
 // uploading images
-const uploader = document.getElementById('uploader');
-const fileButton = document.getElementById('fileButton');
+const uploader = $('#uploader');
+const fileButton = $('#fileButton');
 
 // listens for auth status changes
 auth.onAuthStateChanged(user => {
     console.log("USER:", user);
 })
 
-//function that gets data from db and we try to append to carousel
+//function that gets data from db and we append to carousel
 const imgToCarousel = (data) => {
     //Create variable for the array of images
     const ImgArray = data.val();
+
+    // Create variable to get ids for images
+    let imageIds = Object.keys(data.val())
 
     // create element for each array of image properties
     const keys = Object.values(ImgArray)
     console.log("KEYS:", keys)
 
+    let counter = 0
     keys.forEach(image => {
         //get the values we need in the object
         const array = Object.values(image);
-        // console.log(array)
+        console.log(imageIds)
 
         //create variable for the name of image
-        imgName = array[0];
+        let imgName = array[0];
         //create variable for url of image
-        imgURL = array[1];
+        let imgURL = array[1];
         console.log(imgName, imgURL)
-        // preview
-        // < div class="carousel-item" data - interval="250" >
-        //     <img src="./images/slideshow/Drinks_And_Meal.jpg" class="d-block w-100"
-        //         alt="Drinks and Meal">
-        // </div>
+
 
 
         //create a div with properties need for caurosel item
@@ -57,42 +57,104 @@ const imgToCarousel = (data) => {
         //create variable for img tag, set source to image URL, id to image name (for now thats it)
         const imgTag = $("<img>", {
             "src": imgURL,
-            "class": "d-block w-100",
+            "class": "img-responsive",
             "id": imgName
         });
 
         //append image to carosel item
         imgTag.appendTo(CarouselItem);
-        console.log(CarouselItem, imgTag);
 
         //append carosuel div to carousel
         CarouselItem.appendTo(".carousel-inner")
+
+        // creating a row to append our images so admin can see
+        const rowForImgAdmin = $("<div>")
+            .attr({
+                "class": "row justify-content-right"
+            })
+        // making col to append to row 
+        const colForImgAdmin = $("<div>")
+            .attr({
+                "class": "col-md-12"
+            })
+
+        //make delete button for image
+        const delBtn = $("<button>")
+            .attr({
+                id: imageIds[counter],
+                "class": "btn btn-danger delBtn"
+            })
+
+        delBtn.text("X")
+
+        // append button to row div
+        rowForImgAdmin.append(delBtn)
+
+        // append the col to the row
+        rowForImgAdmin.append(colForImgAdmin);
+
+        // create a img tag for admin page
+        const imgAdmin = $("<img>", {
+            "src": imgURL,
+            "class": "img-responsive",
+            "id": imgName
+        });
+        // append the image to the col
+        colForImgAdmin.append(imgAdmin)
+
+
+        console.log(CarouselItem, imgTag);
         console.log($(".carousel-inner"))
 
-
-
-        // append to div for testability
-        // imgTag.appendTo($("#object"))
+        // append the row to the admin page 
+        $("#image-events").append(rowForImgAdmin)
+        counter++
     })
 
 
 
 }
 
-//logout method
-const logout = document.querySelector('#logout');
-logout.addEventListener("click", (e) => {
+// on click fucntion to delete images from database
+$(document).on('click', ".delBtn", function (e) {
+
+    let newKey = event.target.id
+    console.log(event.target.id);
+
+
+    var adaRef = firebase.database().ref('images/' + newKey);
+    adaRef.remove();
+
+    // $(this.id).hide();
+    console.log(this.id)
+
+    $(".card").hide();
+
+    document.location.reload();
+
+
+});
+
+// logout method
+const logout = $("#logout");
+logout.on("click", (e) => {
     e.preventDefault();
     auth.signOut().then(() => {
-        console.log("signedout")
+        console.log("signed out")
     })
 })
+// const logout = document.querySelector('#logout');
+// logout.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     auth.signOut().then(() => {
+//         console.log("signedout")
+//     })
+// })
 
 // login
-const loginForm = document.querySelector("#login-form");
-loginForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const email = loginForm["login-email"].value;
+const loginForm = $("#login-form");
+loginForm.on("submit", (e) => {
+    const email = loginForm["login-email"].value
     const password = loginForm["login-password"].value;
 
     auth.signInWithEmailAndPassword(email, password).then(cred => {
@@ -102,10 +164,24 @@ loginForm.addEventListener("submit", (e) => {
     })
 })
 
+// const loginForm = document.querySelector("#login-form");
+// loginForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     const email = loginForm["login-email"].value;
+//     const password = loginForm["login-password"].value;
+
+//     auth.signInWithEmailAndPassword(email, password).then(cred => {
+//         // console.log(cred.user)
+//         loginForm.reset();
+//         console.log("signed in")
+//     })
+// })
+
 
 // admin page stuff
 
-fileButton.addEventListener('change', (e) => {
+
+fileButton.on('change', (e) => {
     //Get file
     let file = e.target.files[0];
 
@@ -163,6 +239,11 @@ firestore.collection('/events/').get().then(snapshot => {
 })
 
 //delete images from storage
+function deleteImgFromCarousel(data) {
+
+    let userRef = database.ref('images/' + data);
+    userRef.remove()
+};
 
 
 
@@ -181,6 +262,92 @@ dbRef.on("value", snapshot => {
     imgToCarousel(snapshot)
 
     console.log(snapshot.val())
+});
+
+
+$("#Submit").on("click", function (event) {
+    event.preventDefault();
+
+    var nameInput = $("#nameInput").val();
+    var emailInput = $("#emailInput").val();
+    var messageInput = $("#messageInput").val();
+
+
+
+    var newMessage = {
+        name: {
+            user: nameInput,
+            email: emailInput,
+            content: messageInput,
+            time: currentTime
+        }
+    }
+
+    console.log(newMessage);
+
+
+    database.ref('Messages').push(newMessage);
+
+    $("#nameInput").val(nameInput);
+    $("#emailInput").val(emailInput);
+    $("#messageInput").val(messageInput);
+
+
+
+});
+
+
+database.ref("Messages").on("child_added", function (childSnapshot) {
+    // console.log(childSnapshot.val().key);
+
+    var nameInput = childSnapshot.val().name.user;
+    var emailInput = childSnapshot.val().name.email;
+    var messageInput = childSnapshot.val().name.content;
+    var timeSlot = childSnapshot.val().name.time;
+
+
+    var key = childSnapshot.key;
+
+
+
+    let newCard = (`
+<div class="card" style="width: 26rem; margin:2.5rem;font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;">
+<button class="btn btn-danger xbutton d-flex justify-content-center" type="button" id="${key}" style="color:red; font-size:1rem; font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;">Delete</button>
+<div class="card-body">
+    <p class="card-title">${nameInput}</p>
+    <p class="card-text">${emailInput}</p>
+    <p class="card-text">${messageInput}</p>
+    <p class="card-text" style="font-weight:bold;">${timeSlot}</p>
+</div>
+</div>`);
+
+    $("#admin-row").append(newCard);
+
+
+
+
+});
+
+
+$(document).on('click', ".xbutton", function (e) {
+
+    let newKey = event.target.id
+    console.log(event.target.id);
+    // let newKey = key.slice(1,19);
+    // console.log(newKey);
+    // database.child().remove(newKey);
+
+    var adaRef = firebase.database().ref('Messages/' + newKey);
+    adaRef.remove();
+
+    // $(this.id).hide();
+    console.log(this.id)
+
+    $(".card").hide();
+
+    document.location.reload();
+
+
 });
 
 
