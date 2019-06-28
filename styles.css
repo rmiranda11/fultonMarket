@@ -1,3 +1,18 @@
+@media only screen and (max-width: 600px){
+  .footer{
+    display: none;
+  
+  }
+
+  .navbar-toggler-icon{
+    /* background-color: white; */
+    color:white;
+    opacity: 120%;
+  }
+}
+
+
+
 .address{
   line-height: 2rem;
 }

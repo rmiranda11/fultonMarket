@@ -6,6 +6,10 @@ body{
     height: 100%;
 }
 
+.navbar-toggler {
+    background-color: aqua;
+}
+
 .container-fluid{
     width: 100%;
     margin: 0%;
@@ -85,11 +89,6 @@ cursor: pointer;
 color: white;
 }
 
-.social_icon{
-position: absolute;
-right: 20px;
-top: -45px;
-}
 
 .input-group-prepend span{
 width: 50px;
