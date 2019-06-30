@@ -7,7 +7,7 @@ body{
 }
 
 .navbar-toggler {
-    background-color: aqua;
+ background-image: url("./images/icon\ bars.png");
 }
 
 .container-fluid{

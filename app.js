@@ -162,16 +162,6 @@ $(function () {
 /////////////////////////////////////
 ////////// Nav Bar ////////////////
 
-// function showonlyone(thechosenone) {
-//   $('.home').each(function(index) {
-//        if ($(this).attr("id") == thechosenone) {
-//             $(this).show(200);
-//        }
-//        else {
-//             $(this).hide(600);
-//        }
-//   });
-// };
 
 
 $( "#link1" ).click(function() {
@@ -206,13 +196,19 @@ $( ".link4" ).click(function() {
   $("#menu").hide();
   $(".footer").hide();
 
-  
-
 
 });
 
-
-
+$(window).resize(function(){
+	if ($(window).width() <= 600){	
+    // do something here
+    $(".openTable").hide();
+    $(".openTable2").show();
+  }	
+  else $(".openTable").show();
+  $(".openTable2").hide();
+  
+});
 
 ///////////// Nav end //////////////////
 ////////////////////////////////////////
