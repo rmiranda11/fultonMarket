@@ -1,14 +1,11 @@
-body{
+/* body{
     font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
     background-image: url("./images/musicBackground70.png");
     background-repeat: repeat-y;
     background-size: cover;
     height: 100%;
-}
+} */
 
-.navbar-toggler {
- background-image: url("./images/icon\ bars.png");
-}
 
 .container-fluid{
     width: 100%;

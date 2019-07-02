@@ -1,4 +1,10 @@
 @media only screen and (max-width: 600px){
+ body{
+   background-image: url("./images/musicbackgroundresizeopaque.png");
+   background-repeat: repeat-y;
+   background-size: contain;
+ }
+ 
   .footer{
     display: show;
   }
@@ -10,10 +16,6 @@
   .logo{
     margin-left:8rem;
   }
-  .openTable{
-    display:hide;
-  }
-
   .openTable2{
     display:show;
   }
@@ -37,7 +39,7 @@
   }
 
   .front-txt{
-    margin-left:-2rem;
+    margin-left: -2rem;
   }
 }
 
@@ -55,7 +57,7 @@ body{
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
   background-image: url("./images/musicBackground70.png");
   background-repeat: repeat-y;
-  background-size: cover;
+  background-size: inherit;
   height: 100%;
 }
 .address{
@@ -94,8 +96,7 @@ p{
   margin-top: 1rem;
 }
 .link{
-    margin-left:2rem;
-    margin-top: rem;   
+      
 }
 
 
@@ -204,9 +205,9 @@ p{
 }
 
 body{
-  background-color: #000000;
-  padding: 0px;
-  margin: 0px;
+background-color: #000000;
+padding: 0px;
+margin: 0px;
 }
 
 #gradient{
