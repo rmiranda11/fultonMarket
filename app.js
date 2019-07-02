@@ -145,6 +145,7 @@ $(function () {
       $btn.prop('type', 'button');
       $btn.prop('orig_label', $btn.text());
       $btn.text('Sending ...');
+
     });
 
 
