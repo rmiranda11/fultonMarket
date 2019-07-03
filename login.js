@@ -17,9 +17,15 @@ const database = firebase.database();
 const uploader = $('#uploader');
 const fileButton = $('#fileButton');
 
+
 // listens for auth status changes
 auth.onAuthStateChanged(user => {
     console.log("USER:", user);
+    if (user) {
+        // window.location.replace("/admin.html")
+        // window.location.href = "/admin.html"
+        // location = "/admin.html"
+    }
 })
 
 //function that gets data from db and we append to carousel
@@ -96,7 +102,7 @@ const imgToCarousel = (data) => {
         // create a img tag for admin page
         const imgAdmin = $("<img>", {
             "src": imgURL,
-            "class": "img-responsive",
+            "class": "img-responsive img-thumbnail",
             "id": imgName
         });
         // append the image to the col
@@ -141,6 +147,8 @@ logout.on("click", (e) => {
     e.preventDefault();
     auth.signOut().then(() => {
         console.log("signed out")
+        window.location.replace("/index.html")
+
     })
 })
 // const logout = document.querySelector('#logout');
@@ -154,13 +162,20 @@ logout.on("click", (e) => {
 // login
 const loginForm = $("#login-form");
 loginForm.on("submit", (e) => {
-    const email = loginForm["login-email"].value
-    const password = loginForm["login-password"].value;
+    e.preventDefault();
+    const email = $("#login-email").val();
+    const password = $("#login-password").val();
+    // console.log(email, password)
 
     auth.signInWithEmailAndPassword(email, password).then(cred => {
         // console.log(cred.user)
-        loginForm.reset();
+        // loginForm.reset();
         console.log("signed in")
+        window.location.replace("/admin.html")
+        // window.location.href = "/admin.html"
+        // location = "/admin.html"
+
+
     })
 })
 
@@ -348,6 +363,24 @@ $(document).on('click', ".xbutton", function (e) {
     document.location.reload();
 
 
+});
+
+// on clicks to show messages and hide events
+$("#eventBtn").on("click", function (e) {
+    e.preventDefault();
+    console.log("loaded")
+    $("#events-admin").show();
+
+    $("#messages-admin").hide()
+});
+
+$("#messagesBtn").on("click", function (e) {
+    e.preventDefault();
+    console.log("loaded")
+
+    $("#messages-admin").show();
+
+    $("#events-admin").hide()
 });
 
 
