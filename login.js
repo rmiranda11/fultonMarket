@@ -286,7 +286,8 @@ $("#Submit").on("click", function (event) {
     var nameInput = $("#nameInput").val();
     var emailInput = $("#emailInput").val();
     var messageInput = $("#messageInput").val();
-
+    var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+    console.log(currentTime);
 
 
     var newMessage = {
