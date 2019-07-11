@@ -1,10 +1,11 @@
-body{
+/* body{
     font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
     background-image: url("./images/musicBackground70.png");
     background-repeat: repeat-y;
     background-size: cover;
     height: 100%;
-}
+} */
+
 
 .container-fluid{
     width: 100%;
@@ -85,11 +86,6 @@ cursor: pointer;
 color: white;
 }
 
-.social_icon{
-position: absolute;
-right: 20px;
-top: -45px;
-}
 
 .input-group-prepend span{
 width: 50px;
