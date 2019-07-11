@@ -326,16 +326,17 @@ database.ref("Messages").on("child_added", function (childSnapshot) {
 
 
 
-    let newCard = (`
-<div class="card" style="width: 26rem; margin:2.5rem;font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;">
-<button class="btn btn-danger xbutton d-flex justify-content-center" type="button" id="${key}" style="color:red; font-size:1rem; font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;">Delete</button>
-<div class="card-body">
-    <p class="card-title">${nameInput}</p>
-    <p class="card-text">${emailInput}</p>
-    <p class="card-text">${messageInput}</p>
-    <p class="card-text" style="font-weight:bold;">${timeSlot}</p>
-</div>
-</div>`);
+    let newCard = (
+        `<div class="card" style="width: 26rem; margin:2.5rem;font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;">
+            <button class="btn btn-danger xbutton d-flex justify-content-center" type="button" id="${key}" style="color:red; font-size:1rem; font-family:'Merriweather', 'Helvetica Neue', Arial, sans-serif;">Delete</button>
+            <div class="card-body">
+                <p class="card-title">${nameInput}</p>
+                <p class="card-text">${emailInput}</p>
+                <p class="card-text">${messageInput}</p>
+                <p class="card-text" style="font-weight:bold;">${timeSlot}</p>
+            </div>
+        </div>`
+    );
 
     $("#admin-row").append(newCard);
 
