@@ -21,10 +21,13 @@ const fileButton = $('#fileButton');
 // listens for auth status changes
 auth.onAuthStateChanged(user => {
     console.log("USER:", user);
-    if (user) {
-        // window.location.replace("/admin.html")
-        // window.location.href = "/admin.html"
-        // location = "/admin.html"
+    if (!user) {
+        $("#adminpage").hide()
+        $("#login").show()
+
+    } else {
+        $("#adminpage").show()
+        $("#login").hide()
     }
 })
 
@@ -144,20 +147,14 @@ $(document).on('click', ".delBtn", function (e) {
 // logout method
 const logout = $("#logout");
 logout.on("click", (e) => {
-    e.preventDefault();
+    // e.preventDefault();              
     auth.signOut().then(() => {
         console.log("signed out")
         window.location.replace("/index.html")
 
     })
 })
-// const logout = document.querySelector('#logout');
-// logout.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     auth.signOut().then(() => {
-//         console.log("signedout")
-//     })
-// })
+
 
 // login
 const loginForm = $("#login-form");
@@ -178,20 +175,6 @@ loginForm.on("submit", (e) => {
 
     })
 })
-
-// const loginForm = document.querySelector("#login-form");
-// loginForm.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     const email = loginForm["login-email"].value;
-//     const password = loginForm["login-password"].value;
-
-//     auth.signInWithEmailAndPassword(email, password).then(cred => {
-//         // console.log(cred.user)
-//         loginForm.reset();
-//         console.log("signed in")
-//     })
-// })
-
 
 // admin page stuff
 
@@ -366,6 +349,9 @@ $(document).on('click', ".xbutton", function (e) {
 
 
 });
+
+//hide events section on initial load 
+$("#events-admin").hide();
 
 // on clicks to show messages and hide events
 $("#eventBtn").on("click", function (e) {
