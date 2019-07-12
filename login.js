@@ -195,7 +195,6 @@ loginForm.on("submit", (e) => {
 
 // admin page stuff
 
-
 fileButton.on('change', (e) => {
     //Get file
     let file = e.target.files[0];
@@ -279,7 +278,7 @@ dbRef.on("value", snapshot => {
     console.log(snapshot.val())
 });
 
-
+// Click event for contact page
 $("#Submit").on("click", function (event) {
     event.preventDefault();
 
@@ -300,16 +299,11 @@ $("#Submit").on("click", function (event) {
     }
 
     console.log(newMessage);
-
-
     database.ref('Messages').push(newMessage);
 
     $("#nameInput").val(nameInput);
     $("#emailInput").val(emailInput);
     $("#messageInput").val(messageInput);
-
-
-
 });
 
 
@@ -339,9 +333,6 @@ database.ref("Messages").on("child_added", function (childSnapshot) {
 
     $("#admin-row").append(newCard);
 
-
-
-
 });
 
 
@@ -349,20 +340,14 @@ $(document).on('click', ".xbutton", function (e) {
 
     let newKey = event.target.id
     console.log(event.target.id);
-    // let newKey = key.slice(1,19);
-    // console.log(newKey);
-    // database.child().remove(newKey);
 
     var adaRef = firebase.database().ref('Messages/' + newKey);
     adaRef.remove();
 
-    // $(this.id).hide();
     console.log(this.id)
 
     $(".card").hide();
-
     document.location.reload();
-
 
 });
 
