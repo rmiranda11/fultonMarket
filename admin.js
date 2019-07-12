@@ -21,7 +21,7 @@ $("#Submit").on("click", function (event) {
     var nameInput = $("#nameInput").val();
     var emailInput = $("#emailInput").val();
     var messageInput = $("#messageInput").val();
-    
+
 
 
     var newMessage = {
@@ -29,7 +29,7 @@ $("#Submit").on("click", function (event) {
             user: nameInput,
             email: emailInput,
             content: messageInput,
-            time: currentTime   
+            time: currentTime
         }
     }
 
@@ -96,6 +96,23 @@ $(document).on('click', ".xbutton", function (e) {
     document.location.reload();
 
 
+});
+
+$("#eventBtn").on("click", function (e) {
+    e.preventDefault();
+    console.log("loaded")
+    $("#events-admin").show();
+
+    $("#messages-admin").hide()
+});
+
+$("#messagesBtn").on("click", function (e) {
+    e.preventDefault();
+    console.log("loaded")
+
+    $("#messages-admin").show();
+
+    $("#events-admin").hide()
 });
 
 

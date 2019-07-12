@@ -38,53 +38,87 @@
 
 <body>
 
-    <header role="banner">
-        <h1>Admin Panel</h1>
-        <ul class="utilities">
-            <br>
-            <li id="logout" class="warn"><a href="">Log Out</a></li>
-        </ul>
-    </header>
+    <section id="login">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center h-100">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Sign In</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="login-form">
+                            <div class="input-group form-group">
+                                <input id="login-email" type="text" class="form-control" placeholder="email">
 
-    <nav role='navigation'>
-        <ul class="main">
-            <li id="eventBtn" class="edit"><a href="">Events</a></li>
-            <li id="messagesBtn" class="edit"><a href="">Messages</a></li>
+                            </div>
+                            <div class="input-group form-group">
+                                <input id="login-password" type="password" class="form-control" placeholder="password">
+                            </div>
+                            <div class="row align-items-center remember">
 
-        </ul>
-    </nav>
-
-    <main role="main">
-
-        <section class="panel important">
-            <div class="imagesUploader">
-                <progress value="0" max="100" id="uploader">0%</progress>
-                <input type="file" value="upload" id="fileButton" />
-            </div>
-        </section>
-
-        <section id="events-admin" class="panel important">
-            <h2>Events</h2>
-            <div class="row">
-                <div id="image-events" class="col-md-12">
-
+                            </div>
+                            <div class="form-group align-items-center">
+                                <input type="submit" value="Login" class="btn login_btn">
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="messages-admin" class="panel important">
-            <h2>Messages</h2>
-            <div class="admin">
-                <div class="row" id="admin-row">
-                    
+            </div>
+    </section>
+
+
+    <section id="adminpage">
+
+        <header role="banner">
+            <h1>Welcome Admin</h1>
+            <ul class="utilities">
+                <br>
+                <li id="logout" class="logout warn"><a href="">Log Out</a></li>
+            </ul>
+        </header>
+
+        <nav role='navigation'>
+            <ul class="main">
+                <li id="messagesBtn" class="dashboard"><a href="">Messages</a></li>
+                <li id="eventBtn" class="edit"><a href="">Events</a></li>
+
+            </ul>
+        </nav>
+
+        <main role="main">
+
+            <section id="messages-admin" class="panel important">
+                <h2>Messages</h2>
+                <div class="admin">
+                    <div class="row" id="admin-row">
+
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </main>
+            <section id="events-admin" class="panel important">
+                <h2>Events</h2>
+                <h3>Upload Images</h3>
+                <br>
+                <div class="imagesUploader">
+                    <progress value="0" max="100" id="uploader">0%</progress>
+                    <input type="file" value="upload" id="fileButton" />
+                </div>
+                <br>
+                <div class="row">
+                    <div id="image-events" class="col-md-12">
+
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </section>
+
 
 </body>
-<!-- <script src="./admin.js"></script> -->
 <script src="./login.js"></script>
 
 
