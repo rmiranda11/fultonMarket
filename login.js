@@ -66,7 +66,7 @@ const imgToCarousel = (data) => {
         //create variable for img tag, set source to image URL, id to image name (for now thats it)
         const imgTag = $("<img>", {
             "src": imgURL,
-            "class": "img-responsive",
+            "class": "d-block w-100",
             "id": imgName
         });
 
@@ -84,7 +84,7 @@ const imgToCarousel = (data) => {
         // making col to append to row 
         const colForImgAdmin = $("<div>")
             .attr({
-                "class": "col-md-12"
+                "class": "col-md-4"
             })
 
         //make delete button for image
@@ -107,6 +107,7 @@ const imgToCarousel = (data) => {
             "src": imgURL,
             "class": "img-responsive img-thumbnail",
             "id": imgName
+            
         });
         // append the image to the col
         colForImgAdmin.append(imgAdmin)

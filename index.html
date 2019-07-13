@@ -102,12 +102,12 @@
                 </ul>
 
                 <!--   Show this only lg screens and up   -->
-                <span class="justify-content-center">
-                    <a class="navbar-brand d-none d-lg-block justify-content-center" style="margin-left: 30%;"">
-                        <img id=" fultonMarketLogo" class=" img-fluid justify-content-center"
+                <div class="justify-content-center">
+                    <a class="navbar-brand d-none d-lg-block justify-content-center" style="margin-left: 30%; width:50%;">
+                        <img id=" fultonMarketLogo" class="logo img-fluid justify-content-center"
                         src="./images/fultonMarketLogo.png" alt="Fulton Market Logo">
                     </a>
-                </span>
+                </div>
 
                 <!-- Other two links for the NavBar -->
                 <ul class="navbar-nav">
@@ -156,7 +156,6 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-interval="250">
                                 <img src="./images/slideshow/All_Drinks.jpg" class="d-block w-100" alt="Drinks">
-                                <!-- <img src="./images/musicBackground.jpg" class="d-block w-100"> -->
                             </div>
                             <div class="carousel-item" data-interval="250">
                                 <img src="./images/slideshow/Drinks_And_Meal.jpg" class="d-block w-100"
@@ -242,7 +241,7 @@
                 <div style="margin:2rem;">
                     <p class="title d-flex justify-content-center"
                         style="margin:1rem;font-size: 2rem; margin-left:-1.8rem; color: white">Drinks</p><img
-                        class="menu-pic img-fluid img-thumbnail mx-auto" type="button" src="./images/slideshow/Wine.jpg"
+                        class="menu-pic d-block w-100 img-fluid mx-auto" type="button" src="./images/slideshow/Wine.jpg"
                         onclick="window.open('./2019 Menu (1)-2.pdf', '_blank', 'fullscreen=yes'); return false;">
                 </div>
             </div>
@@ -252,7 +251,7 @@
                 <div style="margin:2rem;">
                     <p class="title d-flex justify-content-center"
                         style="margin:1rem;font-size: 2rem; margin-left:-1.8rem; color: white;">Food</p><img
-                        class="menu-pic img-fluid  mx-auto" type="button" src="./images/slideshow/Ribs.jpg"
+                        class="menu-pic d-block w-100 img-fluid  mx-auto" type="button" src="./images/slideshow/Ribs.jpg"
                         onclick="window.open('./2019 Menu (1)-1.pdf', '_blank', 'fullscreen=yes'); return false;">
                 </div>
 
@@ -262,14 +261,13 @@
             <div class="col-sm-12 d-flex justify-content-center">
                 <h2 class="title" style="font-size: 4.5rem; margin-left:-2.0rem;">Reserve</h2>
             </div>
-            <!-- <div class="row ">
-                <script class="openTable" type='text/javascript' style="color:white; display:none;"
-                    src='//www.opentable.com/widget/reservation/loader?rid=729250&type=standard&theme=wide&iframe=true&overlay=false&domain=com&lang=en-US'></script>
-            </div> -->
-            <div class="row openTable">
+            <div class="row ">
+                    <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=729250&type=standard&theme=standard&iframe=false&overlay=false&domain=com&lang=en-US'></script>
+            </div>
+            <!-- <div class="row openTable">
                 <script type='text/javascript'
                     src='//www.opentable.com/widget/reservation/loader?rid=729250&type=standard&theme=standard&iframe=true&overlay=false&domain=com&lang=en-US'></script>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -363,13 +361,11 @@
     <footer>
         <div id="footer" class=" row d-flex align-items-left justify-content-left footer">
             <div class="foot col-sm-4">
-                <h2>Hours</h2>
-                <p>Monday – Closed</p>
-                <p>Tuesday – Closed</p>
-                <p>Wednesday – 4pm to 12am</p>
-                <p>Thursday – 4pm to 12am</p>
-                <p>Fridays – 4pm to 2am</p>
-                <p>Saturday - 2pm to 2am</p>
+                <h2 class="foot-title">Hours</h2>
+                <p>Mon & Tues – Closed</p>
+                <p>Wed & Thurs – 4pm to 12am</p>
+                <p>Friday – 4pm to 2am</p>
+                <p>Saturday - 12pm to 2am</p>
                 <p>Sunday - 12pm to 10pm</p>
             </div>
 
@@ -445,7 +441,7 @@
 
     <!-- <div id="footer" class="footer row d-flex align-items-left justify-content-center"> -->
 
-</div> -->
+</div> 
 
 
 <!-- firebase auth code -->
