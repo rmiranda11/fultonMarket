@@ -103,9 +103,10 @@
 
                 <!--   Show this only lg screens and up   -->
                 <div class="justify-content-center">
-                    <a class="navbar-brand d-none d-lg-block justify-content-center" style="margin-left: 30%; width:50%;">
+                    <a class="navbar-brand d-none d-lg-block justify-content-center"
+                        style="margin-left: 30%; width:50%;">
                         <img id=" fultonMarketLogo" class="logo img-fluid justify-content-center"
-                        src="./images/fultonMarketLogo.png" alt="Fulton Market Logo">
+                            src="./images/fultonMarketLogo.png" alt="Fulton Market Logo">
                     </a>
                 </div>
 
@@ -221,6 +222,22 @@
                     <img class="front img-fluid img-thumbnail mx-auto" src="./images/pic1.jpg" alt="View of front">
                 </div>
             </div>
+            <div class="row">
+                <div class="front col-sm-5 d-flex align-items-center justify-content-center">
+                    <img class="front img-fluid img-thumbnail mx-auto" src="./images/front.jpg" alt="View of front">
+                </div>
+                <div class="front col-sm-7 d-flex align-items-center justify-content-center">
+                    <p class="front-txt d-flex align-items-center justify-content-center ">
+                        We’re a family-owned business in the West Loop neighborhood offering a friendly and casual
+                        restaurant to enjoy bites, beers and beats. You’ll find our menu sprinkled with family recipes
+                        and Greek-inspired food such as Mini Lamb Burgers, Grilled Octopus and Greek Fries, as well as
+                        gastropub favorites such as sliders, BBQ ribs and pizza and can’t miss guest favorites like the
+                        Lobster Risotto, Pepper Crusted Tuna and the Diablo Pizza. With rotating taps offering seasonal
+                        and local favorites, wine to pair with any bite and creative craft cocktails, we’re a preferred
+                        destination for both dinner and drinks
+                    </p>
+                </div>
+            </div>
             <hr>
         </div>
 
@@ -251,7 +268,8 @@
                 <div style="margin:2rem;">
                     <p class="title d-flex justify-content-center"
                         style="margin:1rem;font-size: 2rem; margin-left:-1.8rem; color: white;">Food</p><img
-                        class="menu-pic d-block w-100 img-fluid  mx-auto" type="button" src="./images/slideshow/Ribs.jpg"
+                        class="menu-pic d-block w-100 img-fluid  mx-auto" type="button"
+                        src="./images/slideshow/Ribs.jpg"
                         onclick="window.open('./2019 Menu (1)-1.pdf', '_blank', 'fullscreen=yes'); return false;">
                 </div>
 
@@ -262,7 +280,13 @@
                 <h2 class="title" style="font-size: 4.5rem; margin-left:-2.0rem;">Reserve</h2>
             </div>
             <div class="row ">
-                    <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=729250&type=standard&theme=standard&iframe=false&overlay=false&domain=com&lang=en-US'></script>
+                <div class="col-md-12">
+
+                    <!-- <script type='text/javascript'
+                        src='//www.opentable.com/widget/reservation/loader?rid=729250&type=standard&theme=standard&iframe=false&overlay=false&domain=com&lang=en-US'></script> -->
+                    <script type='text/javascript'
+                        src='//www.opentable.com/widget/reservation/loader?rid=729250&type=standard&theme=standard&iframe=true&overlay=false&domain=com&lang=en-US'></script>
+                </div>
             </div>
             <!-- <div class="row openTable">
                 <script type='text/javascript'
@@ -441,7 +465,7 @@
 
     <!-- <div id="footer" class="footer row d-flex align-items-left justify-content-center"> -->
 
-</div> 
+</div>
 
 
 <!-- firebase auth code -->
