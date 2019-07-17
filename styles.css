@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px){
  body{
-   background-image: url("./images/musicBackgroundresize.jpg");
+   background-image: url("./images/musicbackgroundresizeopaque.png");
    background-repeat: repeat-y;
    background-size: contain;
  }
@@ -59,7 +59,7 @@ margin:2rem;
 
 body{
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
-  background-image: url("./images/musicBackground70.png");
+  background-image: url("./images/musicbackgroundresizeopaque.png");
   background-repeat: repeat-y;
   background-size: inherit;
   height: 100%;
@@ -71,7 +71,7 @@ body{
 .carousel{
   margin-bottom:2rem;
   border-style: outset;
-  border:1rem grey;
+  border:.1rem solid grey;
 }
 .contact1{
   margin:3rem;
