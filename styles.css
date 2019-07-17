@@ -1,6 +1,6 @@
 @media only screen and (max-width: 600px){
  body{
-   background-image: url("./images/musicbackgroundresizeopaque.png");
+   background-image: url("./images/musicBackgroundresize.jpg");
    background-repeat: repeat-y;
    background-size: contain;
  }
@@ -41,7 +41,7 @@
   }
 
   .title{
-    margin-bottom: 2rem:
+    margin-bottom: 2rem;
   }
 
 
@@ -194,6 +194,10 @@ p{
 .menu-pic:hover {
   opacity: 0.8;
   filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+.title{
+  margin-bottom: 2rem;
 }
 
 .link{
