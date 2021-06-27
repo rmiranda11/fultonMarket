@@ -2,7 +2,8 @@
  body{
    background-image: url("./images/musicbackgroundresizeopaque.png");
    background-repeat: repeat-y;
-   background-size: contain;
+   background-size: cover;
+  
  }
  
   .footer{
@@ -60,8 +61,8 @@ margin:2rem;
 body{
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
   background-image: url("./images/musicbackgroundresizeopaque.png");
-  background-repeat: repeat-y;
-  background-size: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
 }
 .address{
