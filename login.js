@@ -151,7 +151,7 @@ logout.on("click", (e) => {
     // e.preventDefault();              
     auth.signOut().then(() => {
         console.log("signed out")
-        window.location.replace("/index.html")
+        window.location.replace("/fultonMarket/index.html")
 
     })
 })
