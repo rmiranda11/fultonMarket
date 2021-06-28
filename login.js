@@ -169,7 +169,7 @@ loginForm.on("submit", (e) => {
         // console.log(cred.user)
         // loginForm.reset();
         console.log("signed in")
-        window.location.replace("/admin.html")
+        window.location.replace("/fultonMarket/admin.html")
         // window.location.href = "/admin.html"
         // location = "/admin.html"
 
